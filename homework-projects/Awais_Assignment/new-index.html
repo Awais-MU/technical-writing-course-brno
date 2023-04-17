@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>The fundamentals of technical writing | MUNI 2023</title>
+<title>Index file template</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,480 +436,136 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="book toc2 toc-left">
+<body id="index-file-template" class="article toc2 toc-left">
 <div id="header">
-<h1>The fundamentals of technical writing | MUNI 2023</h1>
+<h1>Index file template</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduction_to_asciidoctor">Introduction to Asciidoctor</a>
-<ul class="sectlevel2">
-<li><a href="#_installing_asciidoctor">Installing Asciidoctor</a></li>
-</ul>
-</li>
-<li><a href="#_git_installation">Git installation</a>
-<ul class="sectlevel2">
-<li><a href="#_configuring_git">Configuring Git</a></li>
-<li><a href="#_creating_a_pull_request">Creating a pull request</a></li>
-</ul>
-</li>
-<li><a href="#_additional_resources">Additional resources</a></li>
+<li><a href="#new-1">new #1</a></li>
+<li><a href="#new-2">new #2</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_introduction_to_asciidoctor">Introduction to Asciidoctor</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Asciidoctor is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook and other formats.
-It is written in Ruby and packaged as a Ruby gem.</p>
-</div>
-<div class="sect2">
-<h3 id="_installing_asciidoctor">Installing Asciidoctor</h3>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Asciidoctor requires one of the following implementations of Ruby:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ruby version 2.3 or later</p>
-</li>
-<li>
-<p>JRuby version 9.1 or later</p>
-</li>
-<li>
-<p>TruffleRuby version 20.2 or later</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Operating system requirements:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ubuntu versions 18.04 LTS and 20.04 LTS</p>
-</li>
-<li>
-<p>Fedora version 33 or later</p>
-</li>
-<li>
-<p>macOS Mojave, Catalina, and Big Sur</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Have Homebrew or MacPorts installed</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Microsoft Windows 10</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Procedure</div>
-<p>Use your operating system package manager to install Asciidoctor:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#linux">Install on Linux</a></p>
-</li>
-<li>
-<p><a href="#macos">Install on macOS</a></p>
-</li>
-<li>
-<p><a href="#windows">Install Windows</a></p>
-</li>
-</ul>
-</div>
-<div id="linux" class="olist arabic">
-<div class="title">Linux operating system</div>
-<ol class="arabic">
-<li>
-<p>Use Linux package manager to install Asciidoctor:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>On Debian-based distributions such as Ubuntu, use APT to install Asciidoctor.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install -y asciidoctor</code></pre>
-</div>
-</div>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Install package for converting AsciiDoc documents to PDF.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install ruby-asciidoctor-pdf</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>On RPM-based Linux distributions, such as Fedora, CentOS, and RHEL, use the DNF to install Asciidoctor.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo dnf install -y asciidoctor</code></pre>
-</div>
-</div>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Install package for converting AsciiDoc documents to PDF.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo dnf install rubygem-asciidoctor-pdf</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div id="macos" class="olist arabic">
-<div class="title">macOs operating system</div>
-<ol class="arabic">
-<li>
-<p>Use macOs package manager to install Asciidoctor:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Use Homebrew to install Asciidoctor.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">brew install asciidoctor</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Use MacPorts to install Asciidoctor gem via the Asciidoctor port.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo port install asciidoctor</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Install <code>asciidoctor-pdf</code> package to convert AsciiDoc documents to PDF:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">gem install asciidoctor-pdf</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div id="windows" class="olist arabic">
-<div class="title">Windows operating system</div>
-<ol class="arabic">
-<li>
-<p>To install Asciidoctor on Windows operating system, follow the instructions on the official <a href="https://docs.asciidoctor.org/asciidoctor/latest/install/windows/">Asciidoctor project</a> web page.</p>
-</li>
-<li>
-<p>Use <code>gem</code> to install Asciidoctor.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">gem install asciidoctor</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install <code>asciidoctor-pdf</code> package to convert AsciiDoc documents to PDF.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">gem install asciidoctor-pdf</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Verify that Asciidoctor is available.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash"> asciidoctor --version</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should see information about the Asciidoctor version and your Ruby environment printed in the terminal.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>Asciidoctor 2.0.17 [https://asciidoctor.org]
-Runtime Environment (ruby 3.1.3p185 (2022-11-24 revision 1a6b16756e) [x86_64-linux]) (lc:UTF-8 fs:UTF-8 in:UTF-8 ex:UTF-8)</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Next steps</div>
-<ol class="arabic">
-<li>
-<p>Create and save an AsciiDoc document. You can copy the following example:</p>
-<div class="listingblock">
-<div class="title">sample.adoc</div>
-<div class="content">
-<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">== Writing in AsciiDoc
-
-You can write an AsciiDoc document using any text editor.
-We recommend selecting an editor that supports syntax highlighting for AsciiDoc.
-The color brings contrast to the text, making it easier to read.
-The highlighting also confirms when you have entered the correct syntax for an inline or block element.
-
-For more syntax examples see link:https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Syntax Quick Reference].
-
-IMPORTANT: Save the file with a file extension of `.adoc`.</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>From the directory that contains your AsciiDoc document, run the following command.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>asciidoctor sample.adoc</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>List files in the current directory.</p>
-</li>
-<li>
-<p>Open the <code>sample.html</code> in your web browser.</p>
-</li>
-</ol>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://docs.asciidoctor.org/asciidoctor/latest/install/">Asciidoctor Docs, Install and Update</a></p>
-</li>
-<li>
-<p><a href="https://docs.asciidoctor.org/asciidoctor/latest/errors-and-warnings/">Asciidoctor Errors and Warnings</a></p>
-</li>
-<li>
-<p><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">AsciiDoc Writer’s Guide</a></p>
-</li>
-<li>
-<p><a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/">AsciiDoc Syntax Quick Reference</a></p>
-</li>
-</ul>
-</div>
+<p>Taskwarrior is a free and open-source command-line task management tool. It helps
+users to manage, organize, and prioritize their daily tasks more efficiently. It helps users
+to keep track of their tasks and critical due dates. It allows users to focus and avoid
+distractions.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_git_installation">Git installation</h2>
+<h2 id="new-1">new #1</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Navigate to the <a href="https://github.com/git-guides/install-git">Install Git guide</a>.</p>
-</li>
-<li>
-<p>Follow the steps to install Git according to the operating system you are using.</p>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="_configuring_git">Configuring Git</h3>
 <div class="paragraph">
-<p>Configure Git in command line interface with the following steps:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Set your Git user name:</p>
-<div class="literalblock white-space-pre">
-<div class="content">
-<pre class="nowrap">$ git config --global user.name "<em>your name</em>"</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set your Git user e-mail:</p>
-<div class="literalblock white-space-pre">
-<div class="content">
-<pre class="nowrap">$ git config --global user.email "<em>your email</em>"</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification steps</div>
-<ol class="arabic">
-<li>
-<p>Ensure that your Git user name and email are set:</p>
-<div class="literalblock white-space-pre">
-<div class="content">
-<pre class="nowrap">$ git config --get-regexp user
-user.name John Smith
-user.email john.smith@example.com</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://git-scm.com/doc">Git Documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_creating_a_pull_request">Creating a pull request</h3>
-<div class="paragraph">
-<p>Create a pull request to get your content reviewed and merged to the repository.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Add SSH key to your Github account.</a></p>
-</li>
-<li>
-<p>Fork and clone the <a href="https://github.com/rh-writers/technical-writing-course-brno">technical-writing-course-brno repository</a>.</p>
-</li>
-<li>
-<p>Have your AsciiDoc content ready.</p>
-</li>
-</ul>
+<p>Last assignment. This is a  n#1 with a sample cross reference to <a href="#">new#2</a>.</p>
 </div>
 <div class="paragraph">
-<div class="title">Creating a pull request</div>
-<p>This video demonstrates the basic workflow of submitting a pull request. The video includes Linux commands that might not work on other operating systems.</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<video src="Basic-git-workflow.webm" width="640" controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to the directory with your AsciiDoc files.</p>
-</li>
-<li>
-<p>Use Asciidoctor to build your content locally:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>asciidoctor index.adoc</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Open the adoc.html file using any web browser and verify that your document was converted successfully.</p>
-</li>
-<li>
-<p>Check the status of your Git working directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>git status</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add new and changed files to the Git staging are:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>git add &lt;file-name.adoc&gt; &lt;image.adoc&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a commit:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>git commit</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Enter your commit message in a text editor. You can also use a shortcut command <code>git commit -m "&lt;your-commit-message&gt;"</code>.</p>
-</div>
-</li>
-<li>
-<p>Push your changes to the base repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>git push origin &lt;branch-name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Follow the URL from your terminal to create a pull request on Github.</p>
-</li>
-<li>
-<p>Type a title and description for your pull request.</p>
-</li>
-<li>
-<p>In the description, tag the names of the teachers to notify them you have completed your homework: @pmkovar @ragevou.</p>
-</li>
-<li>
-<p>Click <strong>Create Pull Request</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://learngitbranching.js.org/">Learn Git Branching</a></p>
-</li>
-<li>
-<p><a href="https://opensource.com/downloads/cheat-sheet-git">Git Cheat Sheet</a></p>
-</li>
-</ul>
-</div>
+<p>Taskwarrior is a free and open-source command-line task management tool. It helps
+users to manage, organize, and prioritize their daily tasks more efficiently. It helps users
+to keep track of their tasks and critical due dates. It allows users to focus and avoid
+distractions.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_additional_resources">Additional resources</h2>
+<h2 id="new-2">new #2</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Last Assignment. This is a included new #2 with a sample cross reference to <a href="#">new #1</a>.<br></p>
+</div>
+<div class="paragraph">
+<p>Taskwarrior</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="MUNI-students-spring2023.pdf">Information for MUNI students - spring 2023</a></p>
+<p>Introduction:<br>
+Taskwarrior is a free and open-source command-line task management tool. It helps
+users to manage, organize, and prioritize their daily tasks more efficiently. It helps users
+to keep track of their tasks and critical due dates. It allows users to focus and avoid
+distractions. Here are some features of Taskwarrior:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Priority management</p>
 </li>
 <li>
-<p><a href="https://github.com/rh-writers/technical-writing-course-brno/blob/main/README.md">README.md</a></p>
+<p>Scheduling</p>
 </li>
 <li>
-<p><a href="slides/">Lecture slides</a></p>
+<p>Time tracking</p>
 </li>
 <li>
-<p><a href="homework-projects/">Student&#8217;s homework projects</a></p>
+<p>Customization according to individual needs</p>
+</li>
+<li>
+<p>Integration with other tools such as calendars, email, etc.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Graphic.jpg" alt="300" width="200">
+</div>
+</div>
+<div class="paragraph">
+<p>For more information, kindly visit <a href="https://taskwarrior.org/">github.</a><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Benefits:<br>
+Here are some of the benefits of using Taskwarrior:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Efficient task management.</p>
+</li>
+<li>
+<p>Improved Productivity.</p>
+</li>
+<li>
+<p>Taskwarrior provides a comprehensive view of all the tasks</p>
+</li>
+<li>
+<p>It makes it easy for users to see what needs to be done first.</p>
+</li>
+<li>
+<p>It enables users to keep track of deadlines.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Users or Audiences:<br>
+Any individual, team, or organization can use Taskwarrior. It is significantly more
+beneficial for people working in an environment where they have to manage or deal with
+multiple tasks simultaneously.</p>
+</li>
+<li>
+<p>Why do users need it?:<br>
+Users need Taskwarrior to manage their daily workload efficiently, which reduces their
+stress levels and gives them more productivity in less time. It also helps people to
+collaborate within a team to manage group tasks and set deadlines and prioritizations. It
+also helps individuals to learn time management skills.
+How to use the product?
+To use Taskwarrior, users first need to install it on their system. Here is the official link to
+download Taskwarrior and the steps to download and use it.
+<a href="https://taskwarrior.org/download/" class="bare">https://taskwarrior.org/download/</a></p>
+</li>
+<li>
+<p>Do users accomplish their goals?:<br>
+Yes, it helps users achieve their goals such as time management, reducing daily work
+stress, meeting deadlines, effective team communication, task prioritization, maintaining
+focus, and avoiding distractions.</p>
 </li>
 </ul>
 </div>
